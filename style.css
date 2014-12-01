@@ -3,3 +3,17 @@ html, body {
   padding: 0;
   background: #CCC;
 }
+
+#layout table {
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+#layout table tr {
+  height: 40px;
+}
+
+#layout table tr td {
+  width: 40px;
+  border: 1px dotted #888;
+}

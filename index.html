@@ -3,6 +3,7 @@
   <head>
     <title>Mosaic</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -10,5 +11,26 @@
       <h1>Mosaic</h1>
     </header>
 
+    <div id="layout">
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var $grid = $('<table></table>');
+        var rows = 10;
+        var cols = 30;
+
+        for (var i = 0; i < rows; i++) {
+          var $row = $('<tr></tr>');
+          for (var j =0; j < cols; j++) {
+            var $col = $('<td></td>');
+            $row.append($col);
+          }
+          $grid.append($row);
+        }
+
+        $('#layout').append($grid);
+      });
+    </script>
   </body>
 </html>
